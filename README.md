@@ -1,22 +1,35 @@
-#Scheduler + Bulker + AsyncLogger
->Example of several bulked operations
+# Performing DataBase Ingester
+> Scheduler + Bulker + AsyncLogger
 
-![From CPU To Hard Disk](https://github.com/Ebruzzone/BulkManager/tree/master/src/main/resources/)
+---
 
+![From CPU To Hard Disk](src/main/resources/CPU2HD.gif)
 
+***The computer have a CPU i7 3630QM, 8 GB RAM and Hard Disk SATA II.***
 
-meno di 300 righe per fare:
-creazione dati casuali per tre tabelle diverse
-inserire i dati in mysql
-delete dei dati di mysql
+---
+---
 
-Computer 2012 
-CPU i7 3630QM
-8 GB RAM
-Hard disk SATA II 
+![Functionalities](src/main/resources/Functionalities.JPG)
 
-più di 23000 righe inserite al secondo e non è il limite
+***Functionalities of less than 300 code rows in this project.***
 
-facilità di scrittura codice   
-ottimizzazione dei thread    
-ottimizzazione delle insert con la costruzione di un bulk gestito
+---
+---
+
+With the aforesaid computer and the **300 code rows**, the 3 packages (***Scheduler***, ***Bulker*** and 
+***AsyncLogger***) allow to insert **23000 rows per second** in the 3 MySQL tables and the deletion 
+every **90 seconds**.
+
+---
+---
+
+These 3 packages allow:
+
+- **Easiness** and **smartness** of writing code 
+- **Thread optimization** through the ***Scheduler*** package
+- **Insert** and **delete optimization** through the ***Bulk*** package
+- **Logs optimization** through the ***AsyncLogger*** package
+
+---
+
