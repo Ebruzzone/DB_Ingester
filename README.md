@@ -1,18 +1,18 @@
+
 # Performing DataBase Ingester
+
 > Scheduler + Bulker + AsyncLogger
 
 ### Resources
 
-|  | ![From CPU To Hard Disk](src/main/resources/CPU2HD.gif) |  |
-| :---: |:---:| :---: |
+![From CPU To Hard Disk](src/main/resources/CPU2HD.gif)
 
 ***The computer have a CPU i7 3630QM, 8 GB RAM and Hard Disk SATA II.***
 
 ---
 ### Functionalities
 
-|  |![Functionalities](src/main/resources/Functionalities.JPG)|  |
-| :---: |:---:| :---: |
+![Functionalities](src/main/resources/Functionalities.JPG)
 
 ***Functionalities of less than 300 code rows in this project.***
 
@@ -34,4 +34,3 @@ These 3 packages allow:
 - **Logs optimization** through the ***AsyncLogger*** package
 
 ---
-
