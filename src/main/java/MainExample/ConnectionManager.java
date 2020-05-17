@@ -32,6 +32,7 @@ public class ConnectionManager {
 
 			Class.forName(prop.getProperty("DriverClassName"));
 
+			// Configuration properties of the connection to MySQL database
 			basicDataSource.setDriverClassName(prop.getProperty("DriverClassName"));
 			basicDataSource.setUrl(prop.getProperty("Url"));
 			basicDataSource.setUsername(prop.getProperty("Username"));
@@ -50,6 +51,7 @@ public class ConnectionManager {
 		this.reset = reset;
 	}
 
+	// Gets a connection active to the database and with the prepared statement in input
 	public synchronized PreparedStatement getPreparedStatement(String name, String sql) throws SQLException {
 		if (connections.containsKey(name)) {
 			if (times.get(name).incrementAndGet() > reset) {
@@ -64,6 +66,7 @@ public class ConnectionManager {
 		}
 	}
 
+	// Resets the connection sometimes
 	private void restartConnection(String name) {
 		if (connections.containsKey(name)) {
 			try {
@@ -84,6 +87,7 @@ public class ConnectionManager {
 		}
 	}
 
+	// Close all the connections
 	public synchronized void close() {
 
 		try {

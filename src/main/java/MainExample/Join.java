@@ -20,9 +20,11 @@ public class Join extends Joiner<Integer, Integer, Integer> {
 			sum += element;
 		}
 
+		// Aggregates outputs with the average
 		return (int) sum / elements.size();
 	}
 
+	// Processes the input of each parallel execution
 	@Override
 	protected Integer input(String name, Integer element) {
 
@@ -35,6 +37,7 @@ public class Join extends Joiner<Integer, Integer, Integer> {
 		return element;
 	}
 
+	// Processes the input of Joiner execution
 	@Override
 	protected Integer infoProcessing(Object info) {
 		return info == null ? 0 : (Integer) info;

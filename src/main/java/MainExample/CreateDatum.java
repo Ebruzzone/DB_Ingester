@@ -23,6 +23,7 @@ public class CreateDatum extends Action<Integer, Integer> {
 		r = new Random(random);
 	}
 
+	// Random number or previous number
 	@Override
 	protected Integer infoProcessing(Object info) {
 		return (int) (info == null ? r.nextInt(100) : info);
@@ -34,6 +35,7 @@ public class CreateDatum extends Action<Integer, Integer> {
 		number.incrementAndGet();
 		int i = info + 1;
 
+		// Adds the new datum in the bulk to be inserted in MySQL table
 		bulkManager.add(new Data2MySQL(new StringBuilder(String.valueOf(i)), connectionManager, name));
 		return i;
 	}

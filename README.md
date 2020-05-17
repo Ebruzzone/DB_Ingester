@@ -3,7 +3,7 @@
 
 > Scheduler + Bulker + AsyncLogger
 
-### Resources
+### Hardware
 
 ![From CPU To Hard Disk](src/main/resources/CPU2HD.gif)
 

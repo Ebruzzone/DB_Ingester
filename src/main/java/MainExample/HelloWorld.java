@@ -18,10 +18,10 @@ public class HelloWorld extends Action<Object, Object> {
 
 	@Override
 	protected Object exe(Object info) {
-		Main.logger.logInfo("Hello World");
+		Main.logger.logInfo("Hello World"); // Logs Hello World
 		for (ExecuteStatement executeStatement : executeStatements) {
-			Main.logger.logInfo(executeStatement.getLogs());
-			executeStatement.clearLogs();
+			Main.logger.logInfo(executeStatement.getLogs()); // Logs the logs of the 3 executionStatements
+			executeStatement.clearLogs(); // Clears the logs
 		}
 
 		return null;

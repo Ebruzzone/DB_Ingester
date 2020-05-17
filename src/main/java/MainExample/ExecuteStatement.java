@@ -35,6 +35,7 @@ public class ExecuteStatement extends Action<Object, Object> {
 			sqlInsert.swapStrings("2", "5");
 			sqlInsert.swapStrings("3", "6");
 
+			// Executes the drop statement and the creation statement
 			try {
 				connectionManager.getPreparedStatement(name, sql.getString().split("\n")[0]).execute();
 				connectionManager.getPreparedStatement(name, sql.getString().split("\n")[1]).execute();
@@ -43,6 +44,7 @@ public class ExecuteStatement extends Action<Object, Object> {
 			}
 		}
 
+		// Appends current timestamp to the logs
 		appendLog(System.currentTimeMillis() + " ");
 		return null;
 	}

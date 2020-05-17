@@ -3,6 +3,7 @@ package MainExample;
 public class HoldString {
 	private String string;
 
+	// Wrapper of a string
 	public HoldString(String string) {
 		this.string = string;
 	}
