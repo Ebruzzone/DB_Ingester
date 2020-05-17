@@ -30,7 +30,7 @@ These 3 packages allow:
 
 - **Easiness** and **smartness** of writing code 
 - **Thread optimization** through the ***Scheduler*** package
-- **Insert** and **delete optimization** through the ***Bulk*** package
+- **Insert** and **delete optimization** through the ***Bulker*** package
 - **Logs optimization** through the ***AsyncLogger*** package
 
 ---
